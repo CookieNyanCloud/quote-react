@@ -40,8 +40,6 @@ const MainPage = () => {
     fontSize: `${namefontSize}px`,
   }
 
-  const newQ = `«${QuoteText}»`
-
   return (
     <div>
       <div className='container' style={container}>
@@ -58,7 +56,7 @@ const MainPage = () => {
           </div>
         </div>
         <div className='quote-text' style={quoteText}>
-          <p>{newQ}</p>
+          <p>{QuoteText}</p>
         </div>
         <div className='name' style={name}>
           {Name}
