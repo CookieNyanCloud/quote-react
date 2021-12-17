@@ -40,3 +40,8 @@
   align-self: center;
   text-align: end;
 }
+
+.mini {
+  /* align-self: center; */
+  text-align: left;
+}

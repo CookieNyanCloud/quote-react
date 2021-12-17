@@ -16,16 +16,18 @@ const MainPage = () => {
     width: `${PhotoWidth}px`,
     backgroundImage: `url(${PhotoURL})`,
   }
-  const NameW = 30
+  const NameW = 25
+
   const sotafontSize = PhotoWidth / NameW
-  const sotaletterSpacing = PhotoWidth / (NameW * 4)
+  const sotaletterSpacing = PhotoWidth / (NameW * 5)
   const sota = {
     fontSize: `${sotafontSize}px`,
     letterSpacing: `${sotaletterSpacing}px`,
   }
-  const minifontSize = PhotoWidth / (NameW * 2)
+
+  const minifontSize = (PhotoWidth * 2) / (NameW * 4)
   const mini = {
-    fontSize: `${minifontSize})px`,
+    fontSize: `${minifontSize}px`,
   }
 
   const quoteTextfontSize = PhotoWidth / NameW
