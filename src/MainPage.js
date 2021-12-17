@@ -56,7 +56,7 @@ const MainPage = () => {
           </div>
         </div>
         <div className='quote-text' style={quoteText}>
-          <p>{QuoteText}</p>
+          <p>«{QuoteText}»</p>
         </div>
         <div className='name' style={name}>
           {Name}
