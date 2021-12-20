@@ -5,11 +5,10 @@ const MainPage = () => {
   const [searchParams, setSearchParams] = useSearchParams()
   const QuoteText = searchParams.get('quote-text')
   const Name = searchParams.get('name')
+  const Author = searchParams.get('author')
   const PhotoHeight = searchParams.get('photo-height')
   const PhotoWidth = searchParams.get('photo-width')
   const PhotoURL = searchParams.get('photo-url')
-
-  console.log(QuoteText, Name, PhotoHeight, PhotoWidth, PhotoURL)
 
   const container = {
     height: `${PhotoHeight}px`,
@@ -60,6 +59,11 @@ const MainPage = () => {
         </div>
         <div className='name' style={name}>
           {Name}
+          {Author?.length > 0 && (
+            <div className='name' style={name}>
+              {Author}
+            </div>
+          )}
         </div>
       </div>
     </div>

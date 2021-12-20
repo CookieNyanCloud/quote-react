@@ -29,9 +29,9 @@
   grid-area: quote-text;
   color: white;
   background-color: rgba(0, 0, 0, 0.418);
-  text-align: center;
+  text-align: justify;
   margin: auto;
-  border-radius: 1px;
+  /* border-radius: 1px; */
 }
 
 .name {
