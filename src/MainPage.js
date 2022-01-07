@@ -22,9 +22,13 @@ const MainPage = () => {
     fontSize: `${quoteTextfontSize}px`,
   }
 
+  const to_inherit = {
+    fontSize: `${quoteTextfontSize}px`,
+  }
+
   return (
     <div className='container' style={container}>
-      <div className='up'>
+      <div className='up' style={to_inherit}>
         <div className='logo'>
           <div className='sota'>SOTA</div>
           <div className='mini'>t.me/sotavision</div>
@@ -37,7 +41,7 @@ const MainPage = () => {
           <p>«{QuoteText}»</p>
         </div>
       </div>
-      <div className='down'>
+      <div className='down' style={to_inherit}>
         <div className='name'>
           {Name}
           {Author?.length > 0 && <div className='author'>{Author}</div>}

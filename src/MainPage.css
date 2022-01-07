@@ -30,13 +30,11 @@
 }
 
 .sota {
-  font-size: 225%;
+  font-size: 100%;
 }
 
 .mini {
-  /* align-self: center; */
-  /* text-align: left; */
-  font-size: 80%;
+  font-size: 35%;
 }
 
 .quote {
@@ -94,5 +92,5 @@
   grid-area: name;
   text-align: end;
   align-items: start;
-  font-size: 175%;
+  font-size: 70%;
 }
