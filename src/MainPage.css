@@ -1,47 +1,102 @@
 .container {
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
   display: grid;
-  grid-template-columns: 0.2fr 1fr 1fr 1fr 0.2fr;
+  grid-template-columns: 0.2fr 0.9fr 1fr 1fr 0.2fr;
   grid-template-rows: 0.5fr 2fr 0.5fr;
   gap: 0px 0px;
-  grid-template-areas: '. logo-all . . .' '. quote-text quote-text quote-text .' '. . . name .';
+  grid-template-areas:
+    'up up up up up'
+    'quote quote quote quote quote'
+    'down down down down down';
+  --bg-gr: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
 
-.logo-all {
+.up {
   display: grid;
-  grid-auto-columns: 1fr;
-  grid-template-rows: 0.2fr 0.8fr;
+  grid-template-columns: 0.05fr 0.3fr 0.3fr 0.3fr 0.05fr;
+  grid-template-rows: 0.4fr 0.6fr;
   gap: 0px 0px;
-  grid-area: logo-all;
+  grid-template-areas:
+    '. . . . .'
+    '. logo . . .';
+  grid-area: up;
+  color: rgba(255, 255, 255, 0.726);
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: stretch; */
 }
 
 .logo {
-  grid-area: 2 / 1 / 3 / 2;
-  color: rgba(255, 255, 255, 0.726);
+  grid-area: logo;
 }
 
-.full {
-  display: flex;
-  flex-direction: column;
-}
-
-.quote-text {
-  grid-area: quote-text;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.418);
-  text-align: justify;
-  margin: auto;
-  /* border-radius: 1px; */
-}
-
-.name {
-  grid-area: name;
-  color: white;
-  align-self: center;
-  text-align: end;
+.sota {
+  font-size: 225%;
 }
 
 .mini {
   /* align-self: center; */
-  text-align: left;
+  /* text-align: left; */
+  font-size: 80%;
+}
+
+.quote {
+  display: grid;
+  grid-template-columns: 0.05fr 0.9fr 0.05fr;
+  grid-template-rows: 1fr auto;
+  gap: 0px 0px;
+  grid-template-areas:
+    '. . .'
+    'l text r';
+  grid-area: quote;
+}
+
+.l {
+  grid-area: l;
+  background: rgb(0, 0, 0);
+  background: var(--bg-gr);
+}
+
+.r {
+  grid-area: r;
+  background: rgb(0, 0, 0);
+  background: var(--bg-gr);
+}
+
+.text {
+  grid-area: text;
+  color: white;
+  text-align: center;
+  justify-self: 0nd;
+  margin: auto;
+  background: rgb(0, 0, 0);
+  background: var(--bg-gr);
+}
+
+.down {
+  display: grid;
+  grid-template-columns: 0.05fr 0.3fr 0.3fr 0.3fr 0.05fr;
+  grid-template-rows: 0.2fr 0.4fr 0.2fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    '. . . . .'
+    '. . . name .'
+    '. . . . .';
+  grid-area: down;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.8);
+  align-items: start;
+  /* background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%); */
+}
+
+.name {
+  color: white;
+  grid-area: name;
+  text-align: end;
+  align-items: start;
 }
