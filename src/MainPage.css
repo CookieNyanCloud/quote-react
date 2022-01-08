@@ -89,17 +89,24 @@
   gap: 0px 0px;
   grid-template-areas:
     '. . . . .'
-    '. . . name .'
-    '. . . . .';
+    '. . . author .'
+    '. . name . .';
   grid-area: down;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.8);
-  align-items: start;
+  /* align-items: start; */
 }
 
 .name {
   color: white;
   grid-area: name;
+  text-align: center;
+  align-self: center;
+  font-size: 70%;
+}
+
+.author {
+  color: white;
+  grid-area: author;
   text-align: end;
-  align-items: start;
   font-size: 70%;
 }

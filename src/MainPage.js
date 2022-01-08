@@ -42,10 +42,8 @@ const MainPage = () => {
         </div>
       </div>
       <div className='down' style={to_inherit}>
-        <div className='name'>
-          {Name}
-          {Author?.length > 0 && <div className='author'>{Author}</div>}
-        </div>
+        <div className='name'>— {Name}</div>
+        {Author?.length > 0 && <div className='author'>{Author}</div>}
       </div>
     </div>
   )
