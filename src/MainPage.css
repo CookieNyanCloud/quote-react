@@ -20,9 +20,6 @@
     '. logo . . .';
   grid-area: up;
   color: rgba(255, 255, 255, 0.726);
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* justify-content: stretch; */
 }
 
 .logo {
@@ -30,11 +27,11 @@
 }
 
 .sota {
-  font-size: 100%;
+  font-size: 120%;
 }
 
 .mini {
-  font-size: 35%;
+  font-size: 42%;
 }
 
 .quote {
@@ -46,6 +43,10 @@
     '. . .'
     'l text r';
   grid-area: quote;
+}
+
+.l {
+  grid-area: l;
   background: rgb(0, 0, 0);
   background: linear-gradient(
     0deg,
@@ -55,20 +56,30 @@
   );
 }
 
-.l {
-  grid-area: l;
-}
-
 .r {
   grid-area: r;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
 
 .text {
   grid-area: text;
   color: white;
-  text-align: center;
+  text-align: left;
   justify-self: 0nd;
   margin: auto;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
 
 .down {
@@ -83,8 +94,6 @@
   grid-area: down;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.8);
   align-items: start;
-  /* background: rgb(0, 0, 0);
-  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%); */
 }
 
 .name {
