@@ -87,6 +87,10 @@
   grid-template-columns: 0.05fr 0.3fr 0.3fr 0.3fr 0.05fr;
   grid-template-rows: 0.1fr 0.2fr 0.7fr;
   gap: 0px 0px;
+  /* grid-template-areas:
+    '. . . . .'
+    '. . . author .'
+    '. name name name .'; */
   grid-area: down;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.8);
   /* align-items: start; */
