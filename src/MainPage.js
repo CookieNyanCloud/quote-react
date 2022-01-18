@@ -41,6 +41,21 @@ const MainPage = () => {
     fontSize: `${quoteTextfontSize}px`,
   }
 
+  const col = QuoteText.length
+  let dop = 0
+  if (col < 40) {
+    dop = (40 - col) / 2 + 3
+  }
+
+  let toch = ''
+  for (let i = 0; i < dop; i++) {
+    toch += '.'
+  }
+
+  const pseudo = {
+    color: 'transparent',
+  }
+
   return (
     <div className='container' style={container}>
       <div className='up' style={to_inherit}>
@@ -53,13 +68,16 @@ const MainPage = () => {
         <div className='l'></div>
         <div className='r'></div>
         <div className='text' style={quoteText}>
+          {dop !== 0 ? <p style={pseudo}>{toch}</p> : <></>}
           <p>«{QuoteText}»</p>
+          {dop !== 0 ? <p style={pseudo}>{toch}</p> : <></>}
         </div>
       </div>
       <div className='down' style={(to_inherit, down_var)}>
         <div className='name'>— {Name}</div>
         {Author?.length > 0 && <div className='author'>{Author}</div>}
       </div>
+      <script>let elem = document.querySelector('p')</script>
     </div>
   )
 }
