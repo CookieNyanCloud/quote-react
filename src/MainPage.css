@@ -90,7 +90,7 @@
   grid-template-areas:
     '. . . . .'
     '. . . author .'
-    '. . name . .';
+    '. name name name .';
   grid-area: down;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.8);
   /* align-items: start; */

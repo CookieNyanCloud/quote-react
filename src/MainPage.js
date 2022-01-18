@@ -26,6 +26,21 @@ const MainPage = () => {
     fontSize: `${quoteTextfontSize}px`,
   }
 
+  const tv1 = `'. . . . .'
+    '. . . author .'
+    '. name name name .'`
+
+  const tv2 = `'. . . . .'
+    '. name name name .'
+    '. . . author .'`
+
+  const tamplate = Author ? tv2 : tv1
+
+  const down_var = {
+    gridTemplateAreas: tamplate,
+    fontSize: `${quoteTextfontSize}px`,
+  }
+
   return (
     <div className='container' style={container}>
       <div className='up' style={to_inherit}>
@@ -41,7 +56,7 @@ const MainPage = () => {
           <p>«{QuoteText}»</p>
         </div>
       </div>
-      <div className='down' style={to_inherit}>
+      <div className='down' style={(to_inherit, down_var)}>
         <div className='name'>— {Name}</div>
         {Author?.length > 0 && <div className='author'>{Author}</div>}
       </div>
