@@ -60,7 +60,7 @@ const MainPage = () => {
     <div className='container' style={container}>
       <div className='up' style={to_inherit}>
         <div className='logo'>
-          <div className='sota'>SOTA</div>
+          <div className='sota'> SOTA</div>
           <div className='mini'>t.me/sotаproject</div>
         </div>
       </div>
